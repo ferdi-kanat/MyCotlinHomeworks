@@ -60,9 +60,7 @@ fun main(){
         println(i)
     }
 
-    for (i in 6 downTo 0 step 2) {
-        println(i)
-    }
+    for (i in 6 downTo 0 step 2) println(i)
 
     collection.forEach { number ->
         println(number)
@@ -447,11 +445,9 @@ class MyClass {
     fun publicFun(): String{
         return privateFun()
     }
-
     private fun privateFun():String {
         return "d"
     }
-
 }
 
 
