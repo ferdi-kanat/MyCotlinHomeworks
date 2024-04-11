@@ -42,10 +42,10 @@ class ShoppingList{
     fun displayItem(){
         list.forEachIndexed { index, item ->
             if(item is Food) {
-            println("${index + 1}. ${item.name} , ${item.price}$, ${item.weight}kg")
+                println("${index + 1}. ${item.name} , ${item.price}$, ${item.weight}kg")
         }
             if(item is Cloth) {
-        println("${index + 1}. ${item.name} , ${item.price}, ${item.type}")        }
+                println("${index + 1}. ${item.name} , ${item.price}, ${item.type}")        }
     }}
 
     fun deleteItem(){
