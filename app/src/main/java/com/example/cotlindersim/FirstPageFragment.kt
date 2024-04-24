@@ -20,8 +20,7 @@ class FirstPageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         binding = FragmentFirstPageBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -39,8 +38,7 @@ class FirstPageFragment : Fragment() {
                 addItemToList(title, description)
                 clearInputFields()
             } else {
-                // Both fields are not filled
-                showErrorMessage("Fill all the blanks")
+                "Fill all the blanks".showErrorMessage()
             }
         }
     }
@@ -55,7 +53,8 @@ class FirstPageFragment : Fragment() {
     private fun addItemToList(title: String, description: String) {
         val newItem = ListDataModel(title, description)
         itemList.add(newItem)
-        myAdapter.notifyDataSetChanged()
+
+        myAdapter.notifyItemInserted( /* position = */ (itemList.size - 1))
     }
 
     private fun clearInputFields() {
@@ -63,8 +62,8 @@ class FirstPageFragment : Fragment() {
         binding.editTextText2.text.clear()
     }
 
-    private fun showErrorMessage(message: String) {
-        binding.errorTextView.text = message
+    private fun String.showErrorMessage() {
+        binding.errorTextView.text = this
         // Set a delay to clear the error message after a certain period
         Handler(Looper.getMainLooper()).postDelayed({
             binding.errorTextView.text = ""
