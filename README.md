@@ -8,7 +8,7 @@ Bu proje Kotlin dili dersinde yaptığım ev ödevlerini içermektedir.
 
 Projeyi klonlayın:
 ```sh
-git clone https://github.com/ferdi-kanat/cotlindersim.git
+git clone https://github.com/ferdi-kanat/MyCotlinHomeworks.git
 ```
 
 Gerekli bağımlılıkları yükleyin:
