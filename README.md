@@ -2,6 +2,8 @@
 
 Bu proje Kotlin dili dersinde yaptığım ev ödevlerini içermektedir.
 
+[![CI](https://github.com/ferdi-kanat/MyCotlinHomeworks/actions/workflows/ci.yml/badge.svg)](https://github.com/ferdi-kanat/MyCotlinHomeworks/actions/workflows/ci.yml)
+
 ## Kurulum
 
 Projeyi klonlayın:
